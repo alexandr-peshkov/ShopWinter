@@ -3,16 +3,19 @@
     --gray: #3c4751;
     --gray2: #34404b;
     --lightgray: #495662;
+    --background:#f4f6f8;
 }
 
 body {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
+    background-color: var(--background);
+    
 }
 
 header {
-    padding: 25px 0;
-    margin-bottom: 120px;
+    padding: 25px 0 0 0;
+    background: #fff;
 }
 
 .grid {
@@ -30,11 +33,14 @@ header {
     grid-template-columns: 339px 1fr;
     justify-items: end;
     margin: 0 0 30px 0;
+    
+
 }
 
 .header {
     display: grid;
     grid-template-columns: 15% 70% 1fr;
+
 
 }
 
@@ -74,8 +80,6 @@ header {
 .user img:last-child {
     margin: 0;
 }
-
-ul {}
 
 ul li {
     list-style-type: none;
@@ -146,6 +150,7 @@ span.price {
 
 .arrivals {
     text-align: center;
+    padding: 120px 0 30px 0;
 }
 
 .arrivals-slogan {
@@ -171,6 +176,7 @@ span.price {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 120px;
+    grid-gap: 20px;
 }
 
 .arrivals-content__product {
@@ -199,15 +205,26 @@ span.price {
 .arrivals-content__info span:last-child img {
     margin: 0;
 }
+.arrivals-content__item{
+    background: #fff;
+    padding: 30px;
+}
 
 .circle {
     margin-bottom: 170px;
+    padding: 20px;
+    background: #fff;
+}
+main{
+    background-color:var(--background);
 }
 
 .full {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
+    grid-template-columns: 700px 1fr;
+    grid-gap:20px;
+    align-content: center;
+    padding: 0 0 120px 0;
 }
 
 .full img:first-child {
@@ -217,6 +234,57 @@ span.price {
     font-size: 33px;
     color:var(--orange);
 }
-.full__ads{
+.full-writter{
+    display:grid;
+    grid-template-columns:100px 350px 1fr;
+    background-color: #fff;
+    padding: 20px;
+    align-items: center;
+}
+.full-slogan{
+    font-size: 22px;
+}
+.full-writter__description{
+    font-size: 12px;
+}
+.full-writter__right{
+    background-color: #fff;
 
+}
+.boards{
+    background: #fff;
+    padding-top: 40px;
+
+}
+.best-slogan{
+    margin-bottom: 85px;
+}
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: 20px;
+    
+}
+.card-grid__items{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    background-color: #fff;
+    padding: 40px 15px;
+    align-items: center;
+}
+.rate-img {
+    vertical-align: middle;
+}
+.rate-price{
+    font-size: 16px;
+    color:var(--orange);
+    justify-self: end;
+}
+.rate-name{
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.rate-block{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
 }
