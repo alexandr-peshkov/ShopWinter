@@ -10,7 +10,6 @@ body {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     background-color: var(--background);
-
 }
 
 header {
@@ -33,20 +32,15 @@ header {
     grid-template-columns: 339px 1fr;
     justify-items: end;
     margin: 0 0 30px 0;
-
-
 }
 
 .header {
     display: grid;
     grid-template-columns: 15% 70% 1fr;
-
-
 }
 
 .header-img {
     margin: 0 10px 0 0;
-
 }
 
 .header-email {
@@ -65,7 +59,7 @@ header {
     margin: 0;
 }
 
-.logo {
+.header-logo {
     align-self: center;
 }
 
@@ -81,15 +75,31 @@ header {
     margin: 0;
 }
 
-ul li {
+.header-navigation__list li {
     list-style-type: none;
     display: inline-block;
 }
 
-ul li a {
+.header-navigation__list li a {
     padding: 0 20px;
-
+    font-size: 16px;
+    color: var(--gray2);
+    text-decoration: none;
+    text-transform: capitalize;
 }
+
+.active {
+    color: var(--orange);
+}
+
+.header-navigation__list li a:hover {
+    color: var(--orange);
+}
+
+.header-navigation__list li a.active {
+    color: var(--orange);
+}
+
 
 .header-bg {
     background-image: url(../img/bggerl.png);
@@ -102,7 +112,6 @@ ul li a {
 .header-slogan {
     padding: 0 0 0 100px;
     position: relative;
-
 }
 
 .header-slogan__item {
@@ -135,8 +144,6 @@ span.price {
     width: 10px;
     /* or 100px */
     border-left: 10px solid var(--orange);
-
-
 }
 
 .header-slogan__cart {
@@ -156,7 +163,6 @@ span.price {
 .arrivals-slogan {
     font-size: 36px;
     margin-bottom: 30px;
-
 }
 
 .arrivals-slogan span {
@@ -191,7 +197,6 @@ span.price {
 .arrivals-content__size {
     padding: 35px 0;
     font-size: 14px;
-
 }
 
 .arrivals-content__colors {
@@ -256,13 +261,11 @@ main {
 
 .full-writter__right {
     background-color: #fff;
-
 }
 
 .boards {
     background: #fff;
     padding-top: 40px;
-
 }
 
 .best-slogan {
@@ -273,7 +276,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-
+    justify-items: center;
 }
 
 .card-grid__items {
@@ -297,7 +300,6 @@ main {
 .rate-name {
     margin-bottom: 40px;
     font-weight: bold;
-
 }
 
 .rate-block {
@@ -316,13 +318,16 @@ main {
 .add-cart {
     font-size: 16px;
     color: var(--orange);
-
 }
 
 .news {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 210px 0 270px 0;
+}
+
+.news-letter {
+    padding: 20px;
 }
 
 .news-letter__items {
@@ -335,5 +340,131 @@ main {
 
 .news-letter__items+span {
     font-size: 14px;
-    color:
+}
+
+[type="text"] {
+    font-size: 14px;
+    color: #7c8791;
+    padding: 20px 35px;
+    outline: none;
+    border: none;
+    margin-right: 100px;
+    background: url(../img/email.png) no-repeat left center;
+}
+
+[type="submit"] {
+    font-size: 14px;
+    background: var(--orange);
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+}
+
+.footer-payment {
+    justify-self: center;
+}
+
+.footer-menu {
+    justify-self: center;
+}
+
+.footer-menu ul li a {
+    list-style-type: disc;
+    padding: 10px;
+    display: block;
+}
+
+.footer-payment__name {
+    text-transform: capitalize;
+}
+
+.footer-logo-copyrite div+div {
+    font-size: 14px;
+    color: #28313b;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-payment__name {
+    color: var(--orange);
+    margin-bottom: 24px;
+}
+
+.sub-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 14px;
+    grid-column-gap: 100px;
+}
+
+/* media query */
+
+@media (max-width:1220px) {
+    .arrivals-content__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 120px;
+        grid-gap: 20px;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .sub-footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 14px;
+    }
+}
+@media (max-width:1180px){
+    .news {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 210px 0 270px 0;
+    }
+    .full {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        align-content: center;
+        padding: 0 0 120px 0;
+    }
+}
+@media (max-width:1160px){
+    .header-navigation__list{
+        display: none;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .arrivals-content__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 120px;
+        grid-gap: 20px;
+    }
+    .footer-menu{
+        display: none;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
